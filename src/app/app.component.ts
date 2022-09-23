@@ -10,9 +10,10 @@ import {IContact} from "./interfaces/IContact";
 export class AppComponent {
 
   isLoggedIn: boolean = true;
+  isCreating: boolean = false;
   accountList: IAccount[] = [
-    {username: 'adam', password: 'admin'},
-    {username: 'scott', password: 'admin'},
+    {username: 'admin', password: 'admin'},
+    {username: 'admin', password: 'admin'},
   ]
   contactList: IContact[] = [
     {
@@ -53,5 +54,9 @@ export class AppComponent {
     }
 
     this.isLoggedIn = true;
+  }
+
+  newContact() {
+    this.isCreating = true;
   }
 }

@@ -3,7 +3,14 @@
   (onLogin)="onLogin($event)"
 ></app-login>
 
+<div *ngIf="isLoggedIn === true">
 <app-contact-list
-  *ngIf="isLoggedIn === true"
+  *ngIf="isCreating === false"
   [list]="contactList"
+  (newContact)="newContact()"
 ></app-contact-list>
+
+<app-contact-input
+  *ngIf="isCreating === true"
+></app-contact-input>
+</div>
