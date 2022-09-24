@@ -10,6 +10,9 @@ export class ContactListComponent implements OnInit {
 
   @Input() list!: IContact[];
   @Output() newContact = new EventEmitter<undefined>();
+  @Output() onDeleteContact = new EventEmitter<IContact>();
+  @Output() onUpdateContact = new EventEmitter<IContact>();
+
 
   constructor() {
   }
@@ -21,6 +24,13 @@ export class ContactListComponent implements OnInit {
   onClick () {
     console.log('hello')
     this.newContact.emit();
+  }
+  onContactDelete(contact: IContact){
+    this.onDeleteContact.emit(contact)
+}
+
+  onContactUpdate(contact: IContact) {
+    this.onUpdateContact.emit(contact)
   }
 
 }

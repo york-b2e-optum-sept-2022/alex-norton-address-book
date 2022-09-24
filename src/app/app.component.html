@@ -8,9 +8,13 @@
   *ngIf="isCreating === false"
   [list]="contactList"
   (newContact)="newContact()"
+  (onDeleteContact)="deleteContact($event)"
+  (onUpdateContact)="updateContact($event)"
 ></app-contact-list>
 
 <app-contact-input
   *ngIf="isCreating === true"
+  (onCancel)="cancelCreate()"
+  (onSave)="createContact($event)"
 ></app-contact-input>
 </div>
