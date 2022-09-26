@@ -21,7 +21,7 @@ export class ContactListComponent implements OnInit {
     console.log(this.list)
   }
 
-  onClick () {
+  onNewContact () {
     console.log('hello')
     this.newContact.emit();
   }

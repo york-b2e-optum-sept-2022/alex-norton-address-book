@@ -21,6 +21,7 @@ export class ContactComponent implements OnInit {
   }
 
   onUpdateClick() {
+    this.onUpdateContact.emit(this.contact)
   this.inUpdating = true;
   }
 
