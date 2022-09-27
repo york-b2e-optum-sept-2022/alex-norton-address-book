@@ -1,0 +1,59 @@
+<div>
+  <label>
+    Name:<input #input [(ngModel)]="contact.name">
+  </label>
+</div>
+
+<div>
+  <label>
+    Address:<input #input [(ngModel)]="contact.address">
+  </label>
+</div>
+
+<div>
+  <label>
+    Phone Number:<input #input [(ngModel)]="contact.phoneNumber">
+  </label>
+</div>
+
+<div>
+  <label>
+    Email:<input #input [(ngModel)]="contact.email">
+  </label>
+</div>
+
+<div>
+  <label>
+    Birthday:<input type="date" #input [(ngModel)]="contact.birthday">
+  </label>
+</div>
+
+<div>
+  <label>
+    Meeting Date:<input #input [(ngModel)]="contact.meetingDate">
+  </label>
+</div>
+
+<div>
+  <label>
+    Relation:<input #input [(ngModel)]="contact.relation">
+  </label>
+</div>
+
+<div>
+  <label>
+    Company:<input #input [(ngModel)]="contact.company">
+  </label>
+</div>
+
+<div>
+  <label>
+    Notes:<input #input [(ngModel)]="contact.notes">
+  </label>
+</div>
+<div>
+<!--<button (click)="onUpdate(input.value)")>Save Updates</button>-->
+</div>
+<button (click)="onCancelClick()">Cancel</button>
+<button (click)="onSubmit(contact)">Submit</button>
+
